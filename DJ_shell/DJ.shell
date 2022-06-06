@@ -20,7 +20,7 @@ sudo chmod 666 /var/run/docker.sock
 docker -v
 
 # Jenkins set up
-docker pull jenkins
+docker pull jenkins/jenkins:lts
 
 docker ps -a
 
