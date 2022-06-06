@@ -1,6 +1,6 @@
-git clone https://github.com/KIM-JS-95/DJ-Drop-the-Bit.git
 
-cd ./DJ-Drop-the-Bit/DJ_sell
+
+sudo apt-get update
 
 cat ./img/hat.txt
 
