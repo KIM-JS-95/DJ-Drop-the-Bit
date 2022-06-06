@@ -1,7 +1,11 @@
+git clone https://github.com/KIM-JS-95/DJ-Drop-the-Bit.git
 
+cd ./DJ-Drop-the-Bit/DJ_sell
 
+cat ./img/hat.txt
 
 # Docker set up
+sudo chmode +x ./DJ.shell && ./DJ.shell
 
 $ sudo apt update
 $ sudo apt-get install -y ca-certificates \
@@ -11,9 +15,12 @@ $ sudo apt-get install -y ca-certificates \
     gnupg \
     lsb-release
 
+docker -v
 
 # Jenkins set up
-
 docker pull jenkins
 
 docker ps -a
+
+
+cat ./img/Done.txt
