@@ -1,28 +1,21 @@
+#!/bin/bash
 
-
+# 1. 필요한 소프트웨어 설치
+echo "1. Update"
 sudo apt-get update
 
-cat ./img/hat.txt
+echo "2. Installing Git"
+sudo apt-get install -y git
 
-# Docker set up
-sudo chmode +x ./DJ.shell && ./DJ.shell
+# 2. Docker & Docker-compose 설치
+echo "3. Installing Docker..."
+sudo apt-get install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
 
-$ sudo apt update
-$ sudo apt-get install -y ca-certificates \
-    curl \
-    software-properties-common \
-    apt-transport-https \
-    gnupg \
-    lsb-release
+echo "4. Installing Docker-compose..."
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
-sudo chmod 666 /var/run/docker.sock
+echo "Setup complete."
 
-docker -v
-
-# Jenkins set up
-docker pull jenkins/jenkins:lts
-
-docker ps -a
-
-
-cat ./img/Done.txt
